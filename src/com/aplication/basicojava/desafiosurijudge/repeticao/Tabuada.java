@@ -1,4 +1,4 @@
-package com.aplication.basicojava.desafiosurijudge.sequencial;
+package com.aplication.basicojava.desafiosurijudge.repeticao;
 
 import java.util.Scanner;
 
@@ -10,12 +10,11 @@ public class Tabuada {
     */
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Informar o número que deseja multiplicar: ");
         int x = scanner.nextInt();
 
-        for (int contador = 10; contador >=0; contador--) {
+        for (int contador = 2; contador <= 10; contador++) {
             int resultado = x * contador;
-            System.out.println(resultado);
+            System.out.println(contador + "x " + x + " = " + resultado);
         }
 
     }
