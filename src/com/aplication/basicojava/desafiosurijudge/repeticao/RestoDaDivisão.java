@@ -1,5 +1,7 @@
 package com.aplication.basicojava.desafiosurijudge.repeticao;
 
+import java.util.Scanner;
+
 public class RestoDaDivisão {
     public static void main(String[] args) {
         /*
@@ -14,5 +16,22 @@ public class RestoDaDivisão {
         Imprima todos os valores conforme exemplo abaixo, sempre em ordem crescente.
 
         */
+        Scanner sc = new Scanner(System.in);
+
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        int a;
+
+        if (x > y) {
+            a = x;
+            x = y;
+            y = a;
+        }
+        for (int i = 1 + x; i < y; i++) {
+            if (i % 5 == 2 || i % 5 == 3) {
+                System.out.println(i);
+            }
+        }
     }
 }
+

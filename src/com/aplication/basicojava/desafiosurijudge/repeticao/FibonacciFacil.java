@@ -1,5 +1,7 @@
 package com.aplication.basicojava.desafiosurijudge.repeticao;
 
+import java.util.Scanner;
+
 public class FibonacciFacil {
     public static void main(String[] args) {
         /*
@@ -16,5 +18,22 @@ public class FibonacciFacil {
         espaço após o último valor.
                 *
         * */
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+
+        int after=1;
+        int before=0;
+
+        for(int i=1;i<=n;i++){
+            if(i==n){
+                System.out.println(before);
+            }
+            else{
+                System.out.println(before+" ");
+                int nextQuest=before+after;
+                after=before;
+                before=nextQuest;
+            }
+        }
     }
 }
