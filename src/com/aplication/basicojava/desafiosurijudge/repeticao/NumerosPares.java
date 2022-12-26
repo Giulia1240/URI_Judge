@@ -2,6 +2,7 @@ package com.aplication.basicojava.desafiosurijudge.repeticao;
 
 public class NumerosPares {
     public static void main(String[] args) {
+
        /*
         Faça um programa que mostre os números pares entre 1 e 100, inclusive.
 
@@ -10,7 +11,6 @@ public class NumerosPares {
 
         Saída
         Imprima todos os números pares entre 1 e 100, inclusive se for o caso, um em cada linha.
-
         */
 
         for (int i = 1; i <= 100; i++) {
