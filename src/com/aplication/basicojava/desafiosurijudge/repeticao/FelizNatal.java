@@ -1,5 +1,7 @@
 package com.aplication.basicojava.desafiosurijudge.repeticao;
 
+import java.util.Scanner;
+
 public class FelizNatal {
     public static void main(String[] args) {
         /*
@@ -16,5 +18,12 @@ public class FelizNatal {
         Uma quebra de linha é necessária após a impressão da frase.
         *
         * */
+        Scanner sc = new Scanner(System.in);
+        int i = sc.nextInt();
+        String n = "a";
+        for (int count = 1; count < i; count++) {
+            n += "a";
+        }
+        System.out.println("Feliz nat"+n+"l!");
     }
 }

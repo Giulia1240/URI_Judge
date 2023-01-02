@@ -1,5 +1,7 @@
 package com.aplication.basicojava.desafiosurijudge.repeticao;
 
+import java.util.Scanner;
+
 public class ParImpar {
     public static void main(String[] args) {
         /*
@@ -17,6 +19,35 @@ public class ParImpar {
         Para cada caso, imprima uma mensagem correspondente, de acordo com o exemplo abaixo. Todas as
         letras deverão ser maiúsculas e sempre deverá haver um espaço entre duas palavras impressas na
         mesma linha.
-                * */
+         */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int x;
+        String respostaUm = null;
+        String respostaDois = null;
+        String respostaTres = null;
+        String respostaQuatro = null;
+        String respostaCinco = null;
+
+        for (int i = 1; i <= n; i++) {
+            x = sc.nextInt();
+            if (x == 0) {
+                respostaUm = " NULL";
+            } else if (x % 2 == 0 && x > 0) {
+                respostaDois = "EVEN POSITIVE";
+            } else if (x % 2 != 0 && x > 0) {
+                respostaTres = " ODD POSITIVE";
+            } else if (x % 2 == 0 && x < 0) {
+                respostaQuatro = " EVEN NEGATIVE";
+            } else if (x % 2 != 0 && x < 0) {
+                respostaCinco = " ODD NEGATIVE";
+
+            }
+        }
+        System.out.println(respostaUm);
+        System.out.println(respostaDois);
+        System.out.println(respostaTres);
+        System.out.println(respostaQuatro);
+        System.out.println(respostaCinco);
     }
 }

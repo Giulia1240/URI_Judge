@@ -1,5 +1,8 @@
 package com.aplication.basicojava.desafiosurijudge.repeticao;
 
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
 public class Idades {
     public static void main(String[] args) {
         /*
@@ -15,7 +18,22 @@ public class Idades {
         A saída contém um valor correspondente à média de idade dos indivíduos.
 
         A média deve ser impressa com dois dígitos após o ponto decimal.
-        *
         */
+        Scanner sc = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("0.00");
+        double n = 0;
+        double sum = 0;
+        int count = 0;
+
+        for (int i = 0; i <= n; i++) {
+            n = sc.nextDouble();
+            if (n >= 0) {
+                sum += n;
+                count++;
+            }
+        }
+        double media = sum / count;
+        System.out.println(df.format(media));
+
     }
 }

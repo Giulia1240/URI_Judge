@@ -1,5 +1,7 @@
 package com.aplication.basicojava.desafiosurijudge.repeticao;
 
+import java.util.Scanner;
+
 public class DesafioBino {
     public static void main(String[] args) {
         /*
@@ -22,5 +24,39 @@ public class DesafioBino {
         saída nos exemplos, pois ela deve ser seguida rigorosamente.
 
         */
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int li;
+        int multi2 = 0;
+        int multi3 = 0;
+        int multi4 = 0;
+        int multi5 = 0;
+
+        if (n >= 1 && n <= 1000) {
+
+            for (int i = 1; i <= n; i++) {
+
+                li = sc.nextInt();
+
+                if (li % 2 == 0) {
+                    multi2++;
+                }
+                if (li % 3 == 0) {
+                    multi3++;
+                }
+                if (li % 4 == 0) {
+                    multi4++;
+                }
+                if (li % 5 == 0) {
+                    multi5++;
+                }
+            }
+            System.out.println(multi2 + " Multiplo(s) de 2");
+            System.out.println(multi3 + " Multiplo(s) de 3");
+            System.out.println(multi4 + " Multiplo(s) de 4");
+            System.out.println(multi5 + " Multiplo(s) de 5");
+        }
     }
 }
+
