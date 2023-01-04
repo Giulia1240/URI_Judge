@@ -1,5 +1,7 @@
 package com.aplication.basicojava.desafiosurijudge.vetor;
 
+import java.util.Scanner;
+
 public class FibonacciVetor {
     public static void main(String[] args) {
         /*
@@ -16,5 +18,21 @@ public class FibonacciVetor {
         Para cada caso de teste da entrada, imprima a mensagem "Fib(N) = X", onde X é o N-ésimo termo da série de Fibonacci.
 
          */
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        for (int j = 0; j < t; j++) {
+            int n = sc.nextInt();
+
+            long anterior = 0;
+            long atual = 1;
+            long proximo;
+
+            for (int i = 0; i < n; i++) {
+                proximo = anterior + atual;
+                anterior = atual;
+                atual = proximo;
+            }
+            System.out.println("Fib(" + n + ") = " + anterior);
+        }
     }
 }

@@ -1,5 +1,7 @@
 package com.aplication.basicojava.desafiosurijudge.vetor;
 
+import java.util.Scanner;
+
 public class MenorPosicao {
     public static void main(String[] args) {
         /*
@@ -18,5 +20,28 @@ public class MenorPosicao {
         na entrada. A segunda linha apresenta a mensagem “Posicao:” seguido de um espaço e da posição do
         vetor na qual se encontra o menor valor lido, lembrando que o vetor inicia na posição zero.
                 * */
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] x = new int[n];
+        int menor = 0, pMenor = 0;
+
+        for (int i = 0; i < n; i++) {
+
+            // x[i] = (int) Math.round(Math.random()*100); -->caso deseja numeros aleatorios
+            x[i] = sc.nextInt();
+
+            if (i == 0) {
+                menor = x[i];
+                pMenor = i;
+            } else if (x[i] < menor) {
+                menor = x[i];
+                pMenor = i;
+            }
+        }
+        System.out.println("Menor valor: " + menor);
+        System.out.println("Posicao: " + pMenor);
+
+
     }
 }
